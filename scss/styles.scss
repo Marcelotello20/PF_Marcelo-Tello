@@ -1,0 +1,327 @@
+// HEADERS Y FOOTER
+
+.header {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.4)),
+        url(/images/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    .menu {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+        label {
+            cursor: pointer;
+            display: none;
+        }
+        
+        .logo { 
+            color: white;
+        }
+        
+        .navbar {
+            opacity: 80%;
+            ul li {
+                position: relative;
+                float: left;
+                a {
+                    font-size: 18px;
+                    padding: 20px;
+                    color: white;
+                    display: block;
+                    font-weight: 600;
+                    &:hover {
+
+                        color: #dab200;
+                    }
+                }
+            }
+
+        }
+        
+        #menu {
+            display: none;
+            .menu-icono {
+                width: 25px;
+            }
+        }
+        
+        .submenu {
+            position: relative;
+
+            #carrito {
+              display: none;
+
+              table {
+                width: 100%;
+                th, td {
+                    color: white;
+                }
+              }
+              .borrar {
+                background-color: #dab200;
+                border-radius: 50%;
+                padding: 5px 10px;
+                color: white;
+                font-weight: 800;
+               }
+            }
+            &:hover #carrito {
+              display: block;
+              position: absolute;
+              right: 0;
+              backdrop-filter: blur(10px);
+              top: 100%;
+              z-index: 1;
+              background-color: gray;
+              padding: 20px;
+              min-width: 400px;
+            }
+            
+        }
+    }
+    .header-txt {
+        padding: 0 200px;
+        text-align: center;
+        h1 {
+            font-size: 70px;
+            line-height: 80px;
+            color: #dab200;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            color: white;
+            margin-bottom: 20px;
+        }
+    } 
+}
+.footer {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .link {
+        display: flex;
+        justify-content: space-between;
+    }
+    .link h3 {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .link a {
+        font-size: 16px;
+        color: #ECEBEB;
+        margin-bottom: 10px;
+        display: block;
+        &:hover {
+            color: #8a00da;
+        }
+    }
+}
+
+@media(max-width:991px){
+    .header{
+        min-height: 0vh;
+        .menu {
+            padding: 20px;
+            .logo {
+                display: none;
+            }
+            label {
+                display: initial;
+            }
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #2D343C;
+                display: none;
+                ul li {
+                    width: 100%;
+                }
+            }
+
+        }
+        .header-content{
+
+            padding: 100px 30px;
+
+            .header-txt {
+
+                padding: 0;
+                max-width: 500px;
+                min-width: 300px;
+            }
+        }
+        
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }    
+}  
+
+//Btns 
+
+.btn-1 {
+    display: inline-block;
+    background-color: #dab200;
+    color: white;
+    padding: 13px 35px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    &:hover {
+        background-color: #8a00da;
+    }
+}
+.btn-2 {
+    display: inline-block;
+    padding: 8px 17px;
+    margin: 20px 0 0 0 ;
+    border-radius: 30px;
+    background-color: #8a00da;
+    color: white;
+    transition: background-color 1s;
+    &:hover {
+        background-color: #c35aff;
+    }
+}
+hr {
+    width: 100px;
+    border: 2px solid #8a00da;
+}
+
+//Views
+
+//INDEX
+
+//PRODUCTOS
+.products {
+
+    padding: 70px 0 0 0;
+    text-align: center;
+    
+    h2 {
+        color: #dab200;
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
+    img {
+        width: 250px;
+    }
+    
+    .products-content {
+        
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:35px;
+
+        .product {
+
+            transition: background-color 1s;
+            width: 80%;
+            border-radius: 30px;
+            justify-self: center;
+            padding: 40px;
+            &:hover {
+                background-color: #575757;
+            }  
+
+            .product-txt {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            h3 {
+                font-size: 20px;
+                color: white;
+                margin: 15px 0 15px 0;
+            }
+            .product-txt-parrafo {
+                font-size: 16px;
+                color: white;
+                margin-bottom: 15px;
+            }
+            ul li {
+                font-size: 16px;
+                color: white;
+            }
+            .precio {
+                color: #dab200;
+                font-size: 20px;
+                margin: 15px 0 15px 0;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+@media(max-width:991px){
+    .products {
+        padding: 30px;
+        .products-content {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+
+.services {
+    margin: 100px 0 0 0;
+    padding: 70px 0;
+    background-color:#EBEFF1 ;
+    text-align: center;
+
+    h2 {
+        color: #2D343C;
+    }
+    .service {
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        padding: 35px;
+        text-align: left;
+
+        h3 {
+            font-size: 20px;
+            color: #2D343C;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            color: #575757;
+            margin-bottom: 15px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+@media(max-width:991px){
+    .services {
+        padding: 30px;
+        margin:0;
+        .services-content {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+

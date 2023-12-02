@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ghetto Life</title>
+    <link rel="shorcut icon" href="../images/GLM.png">  
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans&display=swap" rel="stylesheet"> 
+    <meta name="description" content="Estudio de producción musical Ghetto Life Muzik en Santiago de Chile, Cerro Navia.
+    Grabaciones,Mezclas, Master,Instrumentales en sus producciones."> 
+    <meta name="keywords" content="HTML, JS, ESTUDIO, PRODUCCION MUSICAL, SANTIAGO, CERRO NAVIA, CHILE, INICIO, GHETTO LIFE">
+</head>
+<body>
+    <header class="header header-productos">
+
+        <div class="menu container">
+           <a href="../index.html" class="logo"> <img src="../images/GLM.png" width="84px" alt="logo ghetto life"></a>
+           <input type="checkbox" id="menu"/>
+           <label for="menu">
+            <img src="../images/menu.png" class="menu-icono" alt="imagen menu">
+           </label>
+           <nav class="navbar">
+              <ul>
+                <li><a href="#lista-1">Productos</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+              </ul>
+           </nav>
+           <div>
+               <ul>
+                   <li class="submenu">
+                       <img src="../images/car.svg" id="img-carrito" alt="carrito">
+                       <div id="carrito">
+                           <table id="lista-carrito">
+                              <thead>
+                                  <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                  </tr>
+                              </thead>
+                              <tbody></tbody>
+                           </table>
+                           <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                       </div>
+                   </li>
+               </ul>
+           </div>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>Productos</h1>
+                <p>
+                    Estudio de produccion musical enfocado al area de la Blackmusic.
+                    Con experiencia en produccion de variados ritmos como por ejemplo 
+                    Afrobeats - Dancehall - Hiphop - Reggaeton - Trap , entre otros. 
+                    
+                    Nuestro enfoque es el de transmitir emociones con nuestras producciones,
+                    siempre comentamos lo importante que es que trabajemos en conjunto para poder
+                    llegar a trabajar producciones ¡Full Calidad!.
+                </p>
+                <a href="#" class="btn-1">Seccíon Menú</a>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="products containers" id="lista-1">
+        <h2>Producción Musical Completa</h2>
+
+        <div class="products-content">
+
+            <div class="product">
+                <img src="../images/productos/1 promo-apollo-full.png" alt="">
+                <div class="product-txt">
+                    <h3>Promoción Apollo Full</h3>
+                    <ul>
+                        <li>Beat</li>
+                        <li>Grabación</li>
+                        <li>Afinación Manual</li>
+                        <li>Mezcla (Wav - Mp3)</li>
+                        <li>Master (Wav - Mp3)</li>
+                    </ul>
+                    <p class="precio">$155000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/productos/2 promo-apollo.png" alt="">
+                <div class="product-txt">
+                    <h3>Promo Apollo</h3>
+                    <ul>
+                        <li>Beat</li>
+                        <li>Grabación</li>
+                        <li>Mezcla (Wav - Mp3)</li>
+                        <li>Master (Wav - Mp3)</li>
+                    </ul>
+                    <p class="precio">$145000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/productos/3 promo-akai.png" alt="">
+                <div class="product-txt">
+                    <h3>Promo Akai</h3>
+                    <p class="product-txt-parrafo">Beats del catalogo en oferta</p>
+                    <ul>
+                        <li>Beat</li>
+                        <li>Grabación</li>
+                        <li>Mezcla (Wav - Mp3)</li>
+                        <li>Master (Wav - Mp3)</li>
+                    </ul>
+                    <p class="precio">$125000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar al carrito</a>
+                </div>
+            </div>
+
+        </div>
+    
+    </section>
+
+    <section class="products containers" id="lista-2">
+        <h2>Instrumentales</h2>
+        
+        <div class="products-content">
+
+            <div class="product">
+                <img src="../images/productos/4 Beat-a-pedido.png" alt="">
+                <div class="product-txt">
+                    <h3>Beat a Pedido</h3>
+                    <p class="product-txt-parrafo">Beats personalizados ¡A tu gusto y la mejor calidad!</p>
+                    <ul>
+                        <li>Proceso creativo a partir de cualquier idea. Si nos envias una referencia o tu voz ya grabada nos sirve para cohesionar mas el trabajo y asi sea mas compacto</li>
+                        <li>Mezcla del Beat (Wav - Mp3)</li>
+                        <li>PreMaster (Wav - Mp3)</li>
+                    </ul>
+                    <p class="precio">$80000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/productos/5 Beat-catalogo.png" alt="">
+                <div class="product-txt">
+                    <h3>Beat Catalogo</h3>
+                    <p class="product-txt-parrafo">Beats ya hechos listos para comprar y llevar calidad.</p>
+                    <ul>
+                        <li>Puedes elegir entre los beats de nuestro catalogo</li>
+                        <li>Beat mezclado</li>
+                        <li>PreMasterizado</li>
+                    </ul>
+                    <p class="precio">$50000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/productos/6 Beat-en-oferta.png" alt="">
+                <div class="product-txt">
+                    <h3>Beats Ofertas</h3>
+                    <p class="product-txt-parrafo">Beats del catalogo en oferta</p>
+                    <ul>
+                        <li>Puedes elegir entre los beats de nuestra sección de ofertas</li>
+                        <li>Beat mezclado</li>
+                        <li>PreMasterizado</li>
+                    </ul>
+                    <p class="precio">$30000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
+                </div>
+            </div>
+
+        </div>
+         
+    </section>
+
+    <section class="products containers" id="lista-3">
+        <h2>Grabación</h2>
+
+        <div class="products-content">
+            
+            <div class="product">
+                <img src="../images/productos/7 Grabacion-Apollo.png" alt="">
+                <div class="product-txt">
+                    <h3>Grabación Apollo</h3>
+                    <p class="product-txt-parrafo">Grabación en nuestra interfaz Apollo Twin.</p>
+                    <ul>
+                        <li>2 Sesiones - 2Hrs c/u</li>
+                        <li>Recortes, Transiciones,Fx, etc.</li>
+                        <li>Mezcla (Wav - Mp3)</li>
+                        <li>PreMaster (Wav - Mp3)</li>
+                    </ul>
+                    <p class="precio">$70000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="7">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/productos/8 Grabacion-Apollo-Maqueta.png" alt="">
+                <div class="product-txt">
+                    <h3>Grabación Apollo Maqueta</h3>
+                    <p class="product-txt-parrafo">Grabación de voces en nuestra interfaz Apollo Twin.</p>
+                    <ul>
+                        <li>1 Sesiones - 2Hrs</li>
+                        <li>Mezcla en la misma sesión</li>
+                        <li>Stems de grabación de voz</li>
+                        <li>Demo básico</li>
+                    </ul>
+                    <p class="precio">$30000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="8">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/productos/9 Grabacion-Akai.png" alt="">
+                <div class="product-txt">
+                    <h3>Grabación Akai</h3>
+                    <p class="product-txt-parrafo">Grabación de voces en nuestra interfaz Akai EIE.</p>
+                    <ul>
+                        <li>1 Sesiones - 2Hrs</li>
+                        <li>Recortes, Transiciones,Fx, etc.</li>
+                        <li>Mezcla (Wav - Mp3)</li>
+                        <li>Master (Wav - Mp3)</li>
+                    </ul>
+                    <p class="precio">$60000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="9">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/productos/10 Grabacion-Akai-maqueta.png" alt="">
+                <div class="product-txt">
+                    <h3>Grabación Akai Maqueta</h3>
+                    <p class="product-txt-parrafo">Grabación de voces en nuestra interfaz Akai EIE.</p>
+                    <ul>
+                        <li>1 Sesiones - 2Hrs</li>
+                        <li>Mezcla en la misma sesión</li>
+                        <li>Stems de grabación de voz</li>
+                        <li>Demo básico</li>
+                    </ul>
+                    <p class="precio">$20000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="10">Agregar al carrito</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="products containers" id="lista-4">
+        <h2>Ingeneria: Mezcla Y Master</h2>
+
+        <div class="products-content">
+            <div class="product">
+                <img src="../images/productos/11 Sonido-Mezcla-Beat.png" alt="">
+                <div class="product-txt">
+                    <h3>Mezcla Beat</h3>
+                    <p class="product-txt-parrafo">Mezcla tus beats para poder embellecer el trabajo 
+                    hecho por tu beatmaker y conseguir el resultado que tanto esperas.</p>
+                    <p class="product-txt-parrafo">Derecho a 3 Cambios de la mezcla, 
+                    cualquier cambio extra $10.000 que se terminan sumando 3 arreglos mas con el pago</p>
+                    <ul>
+                        <li>Archivo mp3 y Wav 24bits - 16bits (Alta Calidad)</li>
+                        <li>Escala y BPM</li>
+                        <li>Stems de la Mezcla</li>
+                    </ul>
+                    <p class="precio">$50000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="11">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/productos/12 Sonido-Mezcla-Voz.png" alt="">
+                <div class="product-txt">
+                    <h3>Mezcla de Voz</h3>
+                    <p class="product-txt-parrafo">Mezcla tus voces para poder darle ese color, sonido cálido y comprimido 
+                    tan buscado en el mercado y que hara relucir aún más tus grabaciones.</p>
+                    <p class="product-txt-parrafo">Derecho a 3 Cambios de la mezcla, 
+                    cualquier cambio extra $10.000 que se terminan sumando 3 arreglos mas con el pago</p>
+                    <ul>
+                        <li>Archivo mp3 y Wav 24bits - 16bits (Alta Calidad)</li>
+                        <li>Escala y BPM</li>
+                        <li>Stems de la Mezcla</li>
+                    </ul>
+                    <p class="precio">$50000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="12">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/productos/13 Sonido-Master.png" alt="">
+                <div class="product-txt">
+                    <h3>Master</h3>
+                    <p class="product-txt-parrafo">Finaliza el proceso de la ingenieria con el master, 
+                        dandole los ultimos retoques para que el track suene 
+                        competitivo y este listo para las plataformas digitales</p>
+                    <p class="product-txt-parrafo">Derecho a 3 Cambios de la mezcla, 
+                    cualquier cambio extra $10.000 que se terminan sumando 3 arreglos mas con el pago</p>
+                    <ul>
+                        <li>Archivo mp3 y Wav 24bits - 16bits (Alta Calidad)</li>
+                        <li>Escala y BPM</li>
+                        <li>Stems de la Mezcla</li>
+                    </ul>
+                    <p class="precio">$15000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="13">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="../images/productos/14 Sonido-Promo-Mezcla-+-Master.png" alt="">
+                <div class="product-txt">
+                    <h3>Promo Mezcla + Master - Voz y Beat</h3>
+                    <p class="product-txt-parrafo">Proceso de la ingenieria completo con la mezcla de 
+                        sus elementos y el master, 
+                        dandole los ultimos retoques para que el track suene 
+                        competitivo y este listo para las plataformas digitales</p>
+                    <p class="product-txt-parrafo">Derecho a 3 Cambios de la mezcla, 
+                    cualquier cambio extra $10.000 que se terminan sumando 3 arreglos mas con el pago</p>
+                    <ul>
+                        <li>Archivo mp3 y Wav 24bits - 16bits (Alta Calidad)</li>
+                        <li>Escala y BPM</li>
+                        <li>Stems de la Mezcla</li>
+                    </ul>
+                    <p class="precio">$65000</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="14">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="services">
+        <h2>Servicios de Calidad</h2>
+        <div class="productos1__items__texto services-content container">
+            <img src="../images/Microfono.jpg" width="300px" alt="Imagen de un microfono">
+            <h3><strong>Grabaciones</strong></h3>
+            <p><strong>Instrumentos, voces o proyectos acústicos</strong>. Nos encargamos de generar una 
+                buena grabación dando consejos y técnicas para un mejor desarrollo del trabajo. 
+                No olvidar que un buen trabajo de audio parte siempre por una buena grabación y nos 
+                encargamos de que asi sea.</p>
+        </div>
+        <div class="productos1__items__texto services-content container">
+            <img src="../images/Piano fondo1.jpg"  width="300px" alt="Imagen piano">  
+            <h3><strong>Beatmaking</strong></h3>
+            <p><strong>Trabajo dedicado a crear instrumentales</strong> , 
+                blackmusic generalmente trabajando los mas demandados por la comunidad de artistas que trabajan con nosotros. Podemos 
+                generar instrumentales desde cero , con composiciónes únicas como 
+                tambien partir desde tu composicion etc.</p>  
+        </div>
+        <div class="productos1__items__texto services-content container">
+            <img src="../images/Apollo twin.jpg"  width="300px" alt="Imagen interfaz">
+            <h3><strong>Mezcla y Master</strong></h3>
+            <p><strong>Trabajo dedicado a potenciar la emoción principal de tu proyecto y el sonido de este</strong> .Mezclamos los sonidos idientificando cuales son los elementos principales 
+            y como actua la presencia de estos en tu track, para luego pasar a trabajar en el track general , masterizarlo para dejarlo listo para su distribuicion y reproducción. 
+            Estos procesos son las dos últimas etapas en el trabajo del audio.</p>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghetto Life - Estudio de Producción</title>
+    <link rel="shorcut icon" href="./images/GLM.png">  
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans&display=swap" rel="stylesheet"> 
+    <meta name="description" content="Estudio de producción musical Ghetto Life Muzik en Santiago de Chile, Cerro Navia.
+    Grabaciones,Mezclas, Master,Instrumentales en sus producciones."> 
+    <meta name="keywords" content="HTML, JS, ESTUDIO, PRODUCCION MUSICAL, SANTIAGO, CERRO NAVIA, CHILE, INICIO, GHETTO LIFE">
+</head>
+<body>
+    <header class="header header-index">
+
+        <div class="menu container">
+           <a href="./index.html" class="logo"> <img src="./images/GLM.png" width="84px" alt="logo ghetto life"></a>
+           <input type="checkbox" id="menu"/>
+           <label for="menu">
+            <img src="./images/menu.png" class="menu-icono" alt="imagen menu">
+           </label>
+           <nav class="navbar">
+              <ul>
+                <li><a href="./views/productos.html">Productos</a></li>
+                <li><a href="./views/nosotros.html">Nosotros</a></li>
+                <li><a href="./views/contacto.html">Contacto</a></li>
+              </ul>
+           </nav>
+           <div>
+               <ul>
+                   <li class="submenu">
+                       <img src="./images/car.svg" id="img-carrito" alt="carrito">
+                       <div id="carrito">
+                           <table id="lista-carrito">
+                              <thead>
+                                  <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                  </tr>
+                              </thead>
+                              <tbody></tbody>
+                           </table>
+                           <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                       </div>
+                   </li>
+               </ul>
+           </div>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>Ghetto Life Muzik</h1>
+                <p>
+                    Estudio de produccion musical enfocado al area de la Blackmusic.
+                    Con experiencia en produccion de variados ritmos como por ejemplo 
+                    Afrobeats - Dancehall - Hiphop - Reggaeton - Trap , entre otros. 
+                    
+                    Nuestro enfoque es el de transmitir emociones con nuestras producciones,
+                    siempre comentamos lo importante que es que trabajemos en conjunto para poder
+                    llegar a trabajar producciones ¡Full Calidad!.
+                </p>
+                <a href="#" class="btn-1">Seccíon Menú</a>
+            </div>
+        </div>
+
+    </header>
+
+
+    <section class="productos__aviso containers">
+        <div class="separador"></div>
+        <div class="productos__aviso__texto"> 
+          <h2>Visita nuestro catálogo <a class="text-decoration-none  link" href="#catalogo">AQUI!</a></h2>
+          <h3 class="text-light">o solicita una cotización <a class="text-decoration-none  link" href="https://wa.me/56954762733">Whatsapp</a></h3>
+        </div>
+        <div class="separador"></div>
+    </section>
+    
+
+    <section class="services">
+        <h2>Servicios de Calidad</h2>
+        <div class="productos1__items__texto services-content container">
+            <img src="../images/Microfono.jpg" width="300px" alt="Imagen de un microfono">
+            <h3><strong>Grabaciones</strong></h3>
+            <p><strong>Instrumentos, voces o proyectos acústicos</strong>. Nos encargamos de generar una 
+                buena grabación dando consejos y técnicas para un mejor desarrollo del trabajo. 
+                No olvidar que un buen trabajo de audio parte siempre por una buena grabación y nos 
+                encargamos de que asi sea.</p>
+        </div>
+        <div class="productos1__items__texto services-content container">
+            <img src="../images/Piano fondo1.jpg"  width="300px" alt="Imagen piano">  
+            <h3><strong>Beatmaking</strong></h3>
+            <p><strong>Trabajo dedicado a crear instrumentales</strong> , 
+                blackmusic generalmente trabajando los mas demandados por la comunidad de artistas que trabajan con nosotros. Podemos 
+                generar instrumentales desde cero , con composiciónes únicas como 
+                tambien partir desde tu composicion etc.</p>  
+        </div>
+        <div class="productos1__items__texto services-content container">
+            <img src="../images/Apollo twin.jpg"  width="300px" alt="Imagen interfaz">
+            <h3><strong>Mezcla y Master</strong></h3>
+            <p><strong>Trabajo dedicado a potenciar la emoción principal de tu proyecto y el sonido de este</strong> .Mezclamos los sonidos idientificando cuales son los elementos principales 
+            y como actua la presencia de estos en tu track, para luego pasar a trabajar en el track general , masterizarlo para dejarlo listo para su distribuicion y reproducción. 
+            Estos procesos son las dos últimas etapas en el trabajo del audio.</p>
+        </div>
+    </section>
+
+    <section class="producciones containers">
+        <h2 class="producciones__titulo">Nuestras Producciones</h2>
+        <div class="producciones__videos">
+            <div class="videos__grupo">
+                <iframe class="videos__videos" width="480" height="315" src="https://www.youtube.com/embed/TfCC--O5dBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="videos__videos" width="480" height="315" src="https://www.youtube.com/embed/videoseries?list=PLShVQlIvH0B5oCoMFgQ-aTOVpU-FnN7hm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="videos__videos" width="480" height="315" src="https://www.youtube.com/embed/s_BOecmR8aM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="videos__videos" width="480" height="315" src="https://www.youtube.com/embed/kwX8sBAtgK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="videos__videos" width="480" height="315" src="https://www.youtube.com/embed/ZqawX_kSl2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="videos__videos" width="480" height="315" src="https://www.youtube.com/embed/CB0Lm7vrW58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer container">
+
+        <div class="link">
+            <h3>Redes Sociales y Links</h3>
+            <ul>
+                <li><a href="views/contacto.html">Contacto</a></li>
+                <li><a href="https://www.instagram.com/ghettolifemuzik/">Instagram</a></li>
+                <li><a href="https://wa.me/56954762733">Whatsapp</a></li>
+                <li><a href="https://www.youtube.com/@GhettoLifeMuzik">Youtube</a></li>
+            </ul>    
+        </div>
+
+        <div class="link">
+            <h3>Productor Zhelo Beats</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/zhelobeats/">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@zhelobeats">Youtube</a></li>
+                <li><a href="https://open.spotify.com/intl-es/artist/0z4iml98Ook7FRBGi5uVKt?si=JQxauFfJTYGHlBisgNxdSg">Spotify</a></li>
+                <li><a href="https://youtu.be/LERsTeNRCcU?si=StQ8PdI85c3RCLuv">Playlist Trabajos</a></li>
+            </ul>    
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
