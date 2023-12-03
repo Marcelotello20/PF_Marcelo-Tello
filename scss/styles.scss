@@ -1,10 +1,15 @@
-// HEADERS Y FOOTER
+//Colores
+$c-principal :#dab200;
+$c-blanco2 : #EBEFF1;
+$c-plomoletras: #2D343C;
+
+$gradiente-colorida: linear-gradient(to right, #8a00da,#2e0808,#da00ae);
+
+
+// HEADERS( LOGO - MENU - CARRITO) Y FOOTER
 
 .header {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.4)),
-        url(/images/bg.jpg);
+    //DATOS BACKGROUND FONDO + ABAJO
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,7 +25,9 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        
+        .menu-icono{
+            width: 30px;
+        }
         label {
             cursor: pointer;
             display: none;
@@ -85,6 +92,7 @@
               top: 100%;
               z-index: 1;
               background-color: gray;
+              border-radius: 30px;
               padding: 20px;
               min-width: 400px;
             }
@@ -110,14 +118,13 @@
 .footer {
     padding: 50px 0;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     .link {
-        display: flex;
-        justify-content: space-between;
+        display: block;
+        
     }
     .link h3 {
-        color: white;
+        color: $c-principal;
         font-size: 18px;
         margin-bottom: 15px;
     }
@@ -126,10 +133,36 @@
         color: #ECEBEB;
         margin-bottom: 10px;
         display: block;
+        transition: color 1s;
         &:hover {
-            color: #8a00da;
+            color: #dab200;
         }
     }
+}
+//Fondos Headers
+.header-index {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.4)),
+        url(/images/bg.jpg);
+}
+.header-productos {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.4)),
+        url(/images/bg-productos.jpg);
+}
+.header-contacto {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.4)),
+        url(/images/bg-contacto.jpg);
+}
+.header-nosotros {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.4)),
+        url(/images/bg-contacto.jpg);
 }
 
 @media(max-width:991px){
@@ -177,7 +210,8 @@
         flex-direction: column;
         text-align: center;
     }    
-}  
+}
+
 
 //Btns 
 
@@ -190,6 +224,17 @@
     text-transform: capitalize;
     &:hover {
         background-color: #8a00da;
+    }
+}
+.btn-1-verde {
+    display: inline-block;
+    background-color: #dab200;
+    color: white;
+    padding: 13px 35px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    &:hover {
+        background-color: #00da12;
     }
 }
 .btn-2 {
@@ -205,19 +250,78 @@
     }
 }
 hr {
-    width: 100px;
-    border: 2px solid #8a00da;
+    width: 100%;
+    border: 2px solid $c-principal;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 //Views
 
 //INDEX
+.aviso-index {
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+    .aviso-index-txt {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-self: center;
+        h2{
+            color: white;
+        }
+        h3{
+            color: white;
+        }
+        a {
+            text-decoration: none;
+            color: $c-principal;
+            &:hover {
+                color: #dea5ff;
+            }
+        }
+    }
+}
+
+.producciones {
+    margin: 0 auto;
+    width: 100%;
+    h2{
+        color: $c-principal;
+        text-align: center;
+    }
+    .producciones-iframes {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+@media (max-width:374px) {
+    .producciones {
+        display: none;
+    }
+}
+
+// @media(max-width: 991px) {
+//     .producciones-iframes {
+//         flex-direction: row;
+        
+//     }
+// }
 
 //PRODUCTOS
 .products {
 
     padding: 70px 0 0 0;
     text-align: center;
+    margin-bottom: 20px;
     
     h2 {
         color: #dab200;
@@ -285,33 +389,40 @@ hr {
 }
 
 
+
 .services {
-    margin: 100px 0 0 0;
+    margin: 0 0 0 0;
     padding: 70px 0;
     background-color:#EBEFF1 ;
     text-align: center;
 
     h2 {
         color: #2D343C;
+        margin: 0 0 40px 0;
     }
     .service {
-        background-color: white;
+        background-image: white;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         padding: 35px;
         text-align: left;
+        display: flex;
+        .services-content {
+            padding: 20px 0 20px 0;
+        }
 
         h3 {
-            font-size: 20px;
+            font-size: 0px;
             color: #2D343C;
-            margin-bottom: 10px;
+            margin: 20px 0 20px 0;
         }
         p {
             font-size: 16px;
             color: #575757;
-            margin-bottom: 15px;
+            margin: 20px 0 0 30px;
+            
         }
         img {
-            width: 100%;
+            width: 20%;
         }
     }
 }
@@ -325,3 +436,68 @@ hr {
     }
 }
 
+// NOSOTROS 
+
+.nosotros-despedida {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    .nosotros-despedida-txt {
+        display: block;
+        h2{
+            text-align: center;
+            color: $c-principal;
+        }
+        h3 {
+            text-align: center;
+            color: $c-principal;
+        }
+        p {
+            margin: 30px 0 0 0;
+            color: white;
+            font-size: 14px;
+        }
+    }
+}
+
+@media(max-width:991px){
+    .nosotros-despedida{
+        min-height: 0vh;
+        .menu {
+            padding: 20px;
+            .logo {
+                display: none;
+            }
+            label {
+                display: initial;
+            }
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #2D343C;
+                display: none;
+                ul li {
+                    width: 100%;
+                }
+            }
+
+        }
+        .header-content{
+
+            padding: 100px 30px;
+
+            .header-txt {
+
+                padding: 0;
+                max-width: 500px;
+                min-width: 300px;
+            }
+        }
+        
+    }
+}    
