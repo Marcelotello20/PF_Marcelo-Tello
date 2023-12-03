@@ -8,6 +8,26 @@ const elementos2 = document.getElementById('lista-2')
 const elementos3 = document.getElementById('lista-3')
 const elementos4 = document.getElementById('lista-4')
 
+const productos = [
+    {id: 1, tipo: "Produccion completa", nombre: 'Promo Apollo Full', precio: 155000, cantidad: 2},
+    {id: 2, tipo: "Produccion completa", nombre: 'Promo Apollo', precio: 145000, cantidad: 4},
+    {id: 3, tipo: "Produccion completa", nombre: 'Promo Akai', precio: 125000, cantidad: 2},
+    {id: 4, tipo: "Beats", nombre: 'Beat a Pedido', precio: 80000, cantidad: 4},
+    {id: 5, tipo: "Beats", nombre: 'Beat Catalogo', precio: 50000, cantidad: 0},
+    {id: 6, tipo: "Beats", nombre: 'Beats Ofertas', precio: 30000, cantidad: 0},
+    {id: 7, tipo: "Grabacion", nombre: 'Grabacion Apollo', precio: 70000, cantidad: 3},
+    {id: 8, tipo: "Grabacion", nombre: 'Grabacion Apollo Maqueta', precio: 30000, cantidad: 1},
+    {id: 9, tipo: "Grabacion", nombre: 'Grabacion Akai', precio: 60000, cantidad: 3},
+    {id: 10, tipo: "Grabacion", nombre: 'Grabacion Akai Maqueta', precio: 20000, cantidad: 1},
+    {id: 11, tipo: "Sonido", nombre: 'Mezcla Beat', precio: 50000, cantidad: 2},
+    {id: 12, tipo: "Sonido", nombre: 'Mezcla de Voz', precio: 50000, cantidad: 2},
+    {id: 13, tipo: "Sonido", nombre: 'Master', precio: 15000, cantidad: 2},
+    {id: 14, tipo: "Sonido", nombre: 'Promo Mezcla + Master - Voz y Beat', precio: 65000, cantidad: 4},    
+];
+
+
+
+// Eventos
 
 cargarEventListeners();
 
@@ -18,6 +38,7 @@ function cargarEventListeners() {
     vaciarCarritoBtn.addEventListener('click', vaciarCarrito); 
 }
 
+//Agregando mediante Html y su boton al carrito los productos
 function comprarElemento(e) {
     e.preventDefault();
     if(e.target.classList.contains('agregar-carrito')) {
@@ -36,7 +57,7 @@ function leerDatosElemento(elemento) {
     insertarCarrito(infoElemento);
 }
 
-//Carrito con sus elementos creados a partir de leerDatosElemento
+//Carrito con sus productos a partir de leerDatosElemento
 function insertarCarrito(elemento) {
 
     const row = document.createElement('tr');
@@ -58,6 +79,8 @@ function insertarCarrito(elemento) {
     lista.appendChild(row);
 }
 
+
+//Boton para eliminar productos del carrito
 function eliminarElemento(e) {
     e.preventDefault();
     let elemento,
