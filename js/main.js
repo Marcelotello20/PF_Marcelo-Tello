@@ -5,6 +5,8 @@ const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 //PRODUCTOS
 const elementos1 = document.getElementById('lista-1')
 const elementos2 = document.getElementById('lista-2')
+const elementos3 = document.getElementById('lista-3')
+const elementos4 = document.getElementById('lista-4')
 
 
 cargarEventListeners();
@@ -13,14 +15,7 @@ function cargarEventListeners() {
     elementos1.addEventListener('click', comprarElemento);
     elementos2.addEventListener('click', comprarElemento);
     carrito.addEventListener('click', eliminarElemento);
-    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
-    // Cargar carrito desde localStorage
-    document.addEventListener('DOMContentLoaded', () => {
-        const carrito = obtenerCarritoLocalStorage();
-        carrito.forEach(item => {
-            insertarCarrito(item);
-        });
-    });
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito); 
 }
 
 function comprarElemento(e) {
@@ -61,23 +56,7 @@ function insertarCarrito(elemento) {
     `;
 
     lista.appendChild(row);
-
-    // Almacenar en localStorage
-    guardarCarritoLocalStorage();
 }
-
-
-function guardarCarritoLocalStorage() {
-    const carrito = obtenerCarritoLocalStorage();
-    carrito.push(infoElemento);
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-}
-
-function obtenerCarritoLocalStorage() {
-    return localStorage.getItem('carrito') ? JSON.parse(localStorage.getItem('carrito')) : [];
-}
-
-
 
 function eliminarElemento(e) {
     e.preventDefault();
