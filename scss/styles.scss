@@ -1,10 +1,11 @@
 //Colores
 $c-principal :#dab200;
+$c-principal-opaco: #af8000;
 $c-blanco2 : #EBEFF1;
 $c-plomoletras: #2D343C;
 
 $gradiente-colorida: linear-gradient(to right, #8a00da,#2e0808,#da00ae);
-
+$sombra:0 10px 13px rgba(0, 0, 0, 0.3);
 
 // HEADERS( LOGO - MENU - CARRITO) Y FOOTER
 
@@ -17,7 +18,6 @@ $gradiente-colorida: linear-gradient(to right, #8a00da,#2e0808,#da00ae);
     align-items: center;
     min-height: 70vh;
     .menu {
-
         position: absolute;
         top: 0;
         left: 0;
@@ -63,7 +63,8 @@ $gradiente-colorida: linear-gradient(to right, #8a00da,#2e0808,#da00ae);
                 width: 25px;
             }
         }
-        
+
+        //CARRITO
         .submenu {
             position: relative;
 
@@ -107,6 +108,7 @@ $gradiente-colorida: linear-gradient(to right, #8a00da,#2e0808,#da00ae);
             line-height: 80px;
             color: #dab200;
             margin-bottom: 20px;
+            
         }
         p {
             font-size: 16px;
@@ -192,6 +194,8 @@ $gradiente-colorida: linear-gradient(to right, #8a00da,#2e0808,#da00ae);
         .header-content{
 
             padding: 100px 30px;
+            min-width: 320px;
+            
 
             .header-txt {
 
@@ -211,8 +215,39 @@ $gradiente-colorida: linear-gradient(to right, #8a00da,#2e0808,#da00ae);
         text-align: center;
     }    
 }
+@media(max-width:500px){
+    .header {
+        
+        .header-txt {
+            padding: 0 0 0 0;
+            display: grid;
+            flex-direction: column;
+            align-content: center;
+            min-width: 300px;
 
-
+            h1 {
+                font-size: 50px;
+                line-height: 80px;
+                color: #dab200;
+                margin: 20px 0 20px 0;
+                width: 100%;
+                line-height: 0.8;
+                text-align: center;
+            }
+            p {
+                width: 100%;
+                text-align: center;
+            }
+        } 
+    }
+}
+@media(min-width:992px){
+    .header {
+        .navbar .inicio{
+            display: none;
+        }
+    }
+}
 //Btns 
 
 .btn-1 {
@@ -269,7 +304,9 @@ hr {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         justify-self: center;
+        text-align: center;
         h2{
             color: white;
         }
@@ -285,7 +322,6 @@ hr {
         }
     }
 }
-
 .producciones {
     margin: 0 auto;
     width: 100%;
@@ -309,19 +345,13 @@ hr {
     }
 }
 
-// @media(max-width: 991px) {
-//     .producciones-iframes {
-//         flex-direction: row;
-        
-//     }
-// }
-
 //PRODUCTOS
 .products {
 
     padding: 70px 0 0 0;
     text-align: center;
     margin-bottom: 20px;
+    
     
     h2 {
         color: #dab200;
@@ -330,6 +360,8 @@ hr {
     }
     img {
         width: 250px;
+        justify-self: center;
+        align-self: center;
     }
     
     .products-content {
@@ -339,11 +371,12 @@ hr {
         grid-gap:35px;
 
         .product {
+            display: grid;
 
             transition: background-color 1s;
             width: 80%;
             border-radius: 30px;
-            justify-self: center;
+            justify-content: center;
             padding: 40px;
             &:hover {
                 background-color: #575757;
@@ -388,8 +421,6 @@ hr {
     }
 }
 
-
-
 .services {
     margin: 0 0 0 0;
     padding: 70px 0;
@@ -399,6 +430,12 @@ hr {
     h2 {
         color: #2D343C;
         margin: 0 0 40px 0;
+        
+    }
+    h3 {
+        font-size: 0px;
+        color: #2D343C;
+        margin: 20px 0 20px 0;
     }
     .service {
         background-image: white;
@@ -406,15 +443,12 @@ hr {
         padding: 35px;
         text-align: left;
         display: flex;
+        flex-wrap: wrap;
         .services-content {
             padding: 20px 0 20px 0;
         }
 
-        h3 {
-            font-size: 0px;
-            color: #2D343C;
-            margin: 20px 0 20px 0;
-        }
+        
         p {
             font-size: 16px;
             color: #575757;
@@ -422,7 +456,9 @@ hr {
             
         }
         img {
-            width: 20%;
+            width: 250px;
+            min-width: 200px;
+            min-height: 50px;
         }
     }
 }
@@ -439,14 +475,18 @@ hr {
 // NOSOTROS 
 
 .nosotros-despedida {
-    display: block;
+    display: grid;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
     margin-bottom: 30px;
+    min-width: 300px;
+    max-width: 1000px;
     
     .nosotros-despedida-txt {
-        display: block;
+        display: grid;
+        width: 100%;
+        text-align: center;
         h2{
             text-align: center;
             color: $c-principal;
@@ -459,6 +499,8 @@ hr {
             margin: 30px 0 0 0;
             color: white;
             font-size: 14px;
+            width: 100%;
+            align-self: center;
         }
     }
 }
@@ -501,3 +543,58 @@ hr {
         
     }
 }    
+
+
+// CONTACTO HTML 
+
+.contacto__formulario {
+    padding: 20px;
+    z-index: 1;
+    display: grid;
+    flex-direction: column;
+    justify-self: center;
+    border-radius: 8px;
+    box-shadow: $sombra;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #2D343C;
+    .form-item {
+      display: flex;
+      flex-direction: column;
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input, textarea {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
+    h2 {
+      text-align: center;
+      color: $c-principal;
+      margin: 10px 0 20px 0;
+    }
+    form {
+      display: grid;
+      gap: 10px;
+      color: white;
+      button {
+        background-color: $c-principal;
+        color: #000000;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        &:hover {
+          background-color: $c-principal-opaco;
+        }
+      }
+    }
+  
+  }
