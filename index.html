@@ -54,7 +54,7 @@
 
         <div class="header-content container">
             <div class="header-txt">
-                <h1>Ghetto Life Muzik</h1>
+                <div id="headerSaludo"><h1>Ghetto Life Muzik</h1></div>
                 <p>
                     Estudio de produccion musical enfocado al area de la Blackmusic.
                     Con experiencia en produccion de variados ritmos como Afrobeats 
@@ -67,7 +67,20 @@
             </div>
         </div>
 
+        <div class="formulario__datos container">
+            <div class="formulario__datos__1">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre">
+                <label for="edad">Edad:</label>
+                <input type="text" id="edad" placeholder="Ingrese su edad">
+                <button onclick="ingresarDatos()">Ingresar</button>
+                <div class="formulario__datos__mensaje" id="resultado"></div>
+            </div>
+        </div>
+
     </header>
+
+    
 
 
     <section class="aviso-index">
