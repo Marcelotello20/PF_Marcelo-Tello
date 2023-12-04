@@ -1,6 +1,35 @@
-//Formulario Index //
+//FORMULARIO INDEX //
 
-// Clase para construir los datos cuando se ingresen
+//Storage LOCAL
+const personaGuardada = localStorage.getItem("persona");
+if (personaGuardada) {
+    const persona = JSON.parse(personaGuardada);    
+}
+
+function obtenerNombreLocalStorage() {
+    const personaGuardada = localStorage.getItem('persona');
+    if (personaGuardada) {
+        const persona = JSON.parse(personaGuardada);
+        return persona.nombre;
+    } else {
+        return null; // En caso de que no haya ninguna persona guardada en el localStorage
+    }
+}
+const nombrePersona = obtenerNombreLocalStorage();
+
+
+//Evento y Funcion de Encabezado H1 INDEX
+function actualizarEncabezadoConNombre() {
+    const nombre = obtenerNombreLocalStorage();
+    if (nombre) {
+        document.getElementById('headerSaludo').innerHTML = `<h1>Bienvenido</h1><h2>${nombre}</h2>`;
+    }
+}
+document.addEventListener('DOMContentLoaded', function () {
+    actualizarEncabezadoConNombre();
+});
+
+// Clase Persona y Variables mensajes
 class Persona {
     constructor(nombre, edad) {
         this.nombre = nombre;
@@ -13,39 +42,32 @@ let mayorDeEdad = "Eres mayor de edad y puedes disfrutar del contenido completo 
 let menorDeEdad = "Al ser menor te recomendamos que para comprar tengas el consentimiento de tus padres o un adulto a cargo de ti.";
 let datoNoIntroducido = "Completar datos solicitados por favor.";
 
+//Ingreso de datos por formulario__datos
 function ingresarDatos() {
-    // Obtener el valor del input
+    // Ingreso de datos formulario__datos
     let nombre = document.getElementById("nombre").value;
     let edad = document.getElementById("edad").value;
 
-    // Verificar si se introdujeron datos
+    // Verificar datos
     if (nombre === "" || edad === "") {
         document.getElementById("resultado").innerText = "Hola " + datoNoIntroducido;
     } else {
-        // Crear un individuo de la clase Persona
         let persona = new Persona(nombre, parseInt(edad, 10));
 
-        // Modificar el DOM para mostrar el saludo
         if (persona.edad >= 18) {
             document.getElementById("resultado").innerText = saludoIntro + " " + persona.nombre + "! " + mayorDeEdad;
         } else {
             document.getElementById("resultado").innerText = saludoIntro + " " + persona.nombre + "! " + menorDeEdad;
         }
 
-        // Guardar el objeto Persona en el localStorage
         localStorage.setItem("persona", JSON.stringify(persona));
 
-        // Actualizar el encabezado con el nombre introducido
-        document.getElementById("headerSaludo").innerHTML = `<h1>Bienvenido</h1><h2>${nombre}</h2>`;
+        // Actualiza el encabezado con el nombre introducido
+        actualizarEncabezadoConNombre();
     }
 }
 
-//Obtener los datos de la Persona desde el localStorage
-const personaGuardada = localStorage.getItem("persona");
-if (personaGuardada) {
-    const persona = JSON.parse(personaGuardada);
-    
-}
+
 
 
 // PRODUCTOS Y CARRITO //

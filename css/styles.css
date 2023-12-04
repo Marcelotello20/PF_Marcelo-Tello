@@ -154,16 +154,6 @@
   font-family: "Open Sans", serif;
 }
 
-@media (max-width: 600px) {
-  .formulario__datos {
-    justify-content: center;
-    align-content: center;
-  }
-  .formulario__datos .formulario__datos__1 {
-    width: 80%;
-    overflow: hidden;
-  }
-}
 .footer {
   padding: 50px 0;
   display: flex;
@@ -258,7 +248,7 @@
     font-size: 50px;
     line-height: 80px;
     color: #dab200;
-    margin: 20px 0 20px 0;
+    margin: 20px 0 0 0;
     width: 100%;
     line-height: 0.8;
     text-align: center;
@@ -272,6 +262,14 @@
   .header .header-txt p {
     width: 100%;
     text-align: center;
+  }
+  .header .formulario__datos {
+    justify-content: center;
+    align-content: center;
+  }
+  .header .formulario__datos .formulario__datos__1 {
+    width: 80%;
+    overflow: hidden;
   }
 }
 @media (min-width: 992px) {
